@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
+
 import com.mauricio.dsmovie.dto.MovieDTO;
 import com.mauricio.dsmovie.services.MovieService;
 
+@Slf4j
 @RestController
 @RequestMapping(value = "/movies")
 public class MovieController {
@@ -25,9 +28,9 @@ public class MovieController {
 
     @GetMapping(value = "/{id}")
     public MovieDTO findById(@PathVariable Long id){
+        log.info("MovieController.findById - Start - imput: {}", id);
         return movieService.findById(id);
     }
-    
 
 }
 
