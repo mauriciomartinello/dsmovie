@@ -37,7 +37,6 @@ function Star({ fill } : StarProps){
 function MovieStars({score} : Props){
 
   const fills = getFills(score);
-  console.log(score);
 
   return (
     <div className="dsmovie-stars-container">
