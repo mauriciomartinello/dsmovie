@@ -16,7 +16,7 @@ function MovieScore({ score, count} : Props) {
             <MovieStars score={score}/>
             <p className="dsmovie-score-count">
                 {count}
-                avaliações</p>
+                 <span> avaliações</span></p>
         </div>
     );
 }
